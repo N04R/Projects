@@ -9,7 +9,7 @@ hauteur_ecran = 700
 class Vaisseau(pygame.sprite.Sprite):
     def __init__(self):
         super().__init__()
-        self.surf = pygame.image.load("D:/projet_jeu_python/ressources/vaisseau.png").convert()
+        self.surf = pygame.image.load("ressources/vaisseau.png").convert()
         self.surf = pygame.transform.scale(self.surf, (50, 50))
         self.surf = pygame.transform.rotate(self.surf, -90)
         self.surf.set_colorkey((255, 255, 255), RLEACCEL)
@@ -30,7 +30,7 @@ class Vaisseau(pygame.sprite.Sprite):
 class Missille(pygame.sprite.Sprite):
     def __init__(self, center_missile):
         super().__init__()
-        self.surf = pygame.image.load("D:/projet_jeu_python/ressources/missiles.png").convert()
+        self.surf = pygame.image.load("ressources/missiles.png").convert()
         self.surf = pygame.transform.scale(self.surf, (50, 50))
         self.surf.set_colorkey((255, 255, 255), RLEACCEL)
         self.rect = self.surf.get_rect(center=center_missile)
@@ -44,7 +44,7 @@ class Missille(pygame.sprite.Sprite):
 class Enemi(pygame.sprite.Sprite):
     def __init__(self):
         super().__init__()
-        self.surf = pygame.image.load("D:/projet_jeu_python/ressources/enemy.png").convert()
+        self.surf = pygame.image.load("ressources/enemy.png").convert()
         self.surf = pygame.transform.scale(self.surf, (50, 50))
         self.surf.set_colorkey((255, 255, 255), RLEACCEL)
         self.rect = self.surf.get_rect(
